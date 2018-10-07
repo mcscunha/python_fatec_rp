@@ -1,0 +1,40 @@
+TITULO
+Desenvolvimento de software para elaboração de horários de aula de instituição de ensino utilizando programação inteira
+
+1 JUSTIFICATIVA
+Por que desenvolver uma solucao de Problema de Programação de Horários (PPH)?
+a) É uma dificuldade que acho interessante
+b) Ajuda a direcao da Fatec e seus funcionarios
+c) Forma de "devolver" o dinheiro investido em minha formacao (instituicao e comunidade)
+d) Possibilidade de comercializar o software
+e) Possibilidade de extender a solucao para outras areas (hospitais, bombeiros e aeroportos)
+f) Forma de ganhar conhecimento em Python + Django + PLI
+
+2 PROBLEMA DE PESQUISA
+Qual a melhor alocação de disciplinas em salas de aula respeitando um conjunto de regras e 
+restrições visando a minimização do custo e/ou tempo empregado na tarefa e maximização 
+dos recursos limitados disponiveis?
+
+3 OBJETIVO GERAL
+Desenvolver um software que esteja disponivel na web para os professores e direcao da 
+instituição preencherem os dados necessarios para o processamento, encontrar a melhor 
+distribuição destes recursos e disponibilizar este resultado na internet e/ou email 
+para cada um dos envolvidos (stakeholders).
+
+3.1 OBJETIVO ESPECÍFICO
+Nao sei
+
+4 HIPÓTESE DE PESQUISA
+O software web desenvolvido consegue alocar todas as disciplinas, de todos os cursos e
+de todos os turnos, respeitando todas as restricoes impostas e tempo de processamento
+inferior a uma hora utilizando uma maquina domestica fabricada a partir de 2010?
+
+5 METODOLOGIA
+
+
+6 REFERENCIAL TEÓRICO
+HILLIER, F. S.; LIEBERMAN, G. J. Introdução à pesquisa operacional. 9ª ed. Porto Alegre: AMGH, 2012.
+ANDRADE, E. L. Introdução à pesquisa operacional. 4.ed. LTC, 2009.
+ARENALES, M.; ARMENTANO, V.; MORABITO, R.; YANNASSE, H. Pesquisa operacional: para cursos de engenharia. 2ª ed. Rio de Janeiro: Elsevier, 2015.
+KOTSKO, E. G. S; STEINER, M. T. A.; MACHADO, A. L. F. Otimização na construção da grade horária escolar – Uma aplicação
+XAVIER, E. M.; SILVA, A. L. Estudo de caso de um problema programação de horários: timetabling problem na escola de minas UFOP. Ouro Preto, 2013.

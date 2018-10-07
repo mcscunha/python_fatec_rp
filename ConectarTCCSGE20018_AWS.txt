@@ -1,0 +1,23 @@
+psql -h tccsge2018.colyonzwqpbv.us-east-2.rds.amazonaws.com -U usrpsg -d dbtccsge2018
+ou
+psql -h 13.58.110.114 -U usrpsg -d dbtccsge2018
+
+senha: Heliw73%
+
+
+-- Setar a conexao ativa para aceitar acentuacao brasileira
+set client_encoding to 'iso-8859-1';
+
+
+--
+-- Para importacao com COPY, somente se o usuario for SUPERUSER ou se fizer por linha de comando usando psql
+--
+\copy cursos (curso) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/cursos.csv' delimiter ',' csv header;
+\copy dias (dia) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/diasN.csv' delimiter ',' csv header;
+\copy disciplinas (disciplina, professor, curso, periodo, semestre, ch) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/disciplinas.csv' delimiter ',' csv header;
+\copy disponibilidades (professor, periodo, horario, id, segunda, terca, quarta, quinta, sexta, sabado) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/dispo_teste.csv' delimiter ',' csv header;
+\copy periodos (periodo) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/periodo.csv' delimiter ',' csv header;
+\copy professores (professor) from '/home/murilocunha/Documentos/TCC/Grade GMPLv1.1/professores.csv' delimiter ',' csv header;
+
+-- Para finalizar a conexao
+\q

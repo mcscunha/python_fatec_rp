@@ -1,0 +1,33 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" 
+          name="viewport">
+    <title>Listagem de Professores</title>
+    <!--
+        <link href="css/seu-stylesheet.css" rel="stylesheet"/>
+        <script src="scripts/seu-script.js"></script>
+    -->
+</head>
+<body>
+    <p>Lista de professores cadastrados:</p>
+    <ul>
+        {% for prof in profs %}
+            <li>
+                <a href="{% url 'gh_upd_prof' prof.id_professor %}"> {{ prof.professor }} </a> </tab>
+                <a href="{% url 'gh_del_prof' prof.id_professor %}"> Deletar </a>
+            </li>
+        {% endfor %}
+    </ul>
+ 
+ 
+	<aside>
+	    <br>
+	    <a href="{% url 'gh_cad_prof' %}">Novo Professor</a>
+	</aside>
+ 
+	<footer>
+	    <p>Copyright 2018 - TCC - Fatec-Ribeirão Preto</p>
+	</footer>
+</body>
+</html>

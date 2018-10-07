@@ -1,0 +1,132 @@
+Horário Fatec v 1.1
+Alocação ideal  336
+Total alocado  150
+Disciplinas fora da disponibilidade dada
+
+
+  ADS   Noite   Semestre 1
+
+  seg;    1;       LAB HARD;          Marco;
+  seg;    2;       INGLES I;           Anna;
+  ter;    1;      ADM GERAL;         Suzana;
+  ter;    2;      ADM GERAL;         Suzana;
+  qua;    1;        ALG L P;       Doniseti;
+  qua;    2;        ALG L P;       Doniseti;
+  qui;    1;       PROG M I;        Geraldo;
+  qui;    2;       PROG M I;        Geraldo;
+  sex;    1;       A O COMP;       Carlos D;
+  sex;    2;       A O COMP;       Carlos D;
+  sab;    2;       MAT DISC;         Junior;
+  sab;    3;       MAT DISC;         Junior;
+
+
+  ADS   Noite   Semestre 2
+
+  seg;    1;        CaLCULO;         Junior;
+  seg;    2;        CaLCULO;         Junior;
+  ter;    1;      INGLES II;        Claudia;
+  ter;    2;         CONTAB;        Leandro;
+  qua;    1;        COM EXP;         Carlos;
+  qua;    2;        COM EXP;         Carlos;
+  qui;    1;      LING PROG;          Perez;
+  qui;    2;      LING PROG;          Perez;
+  sex;    1;     ENG SOFT I;          Cozin;
+  sex;    2;     ENG SOFT I;          Cozin;
+  sab;    2;       SIST INF;       Carlos D;
+  sab;    3;       SIST INF;       Carlos D;
+
+
+  ADS   Noite   Semestre 3
+
+  seg;    1;       ESTAT AP;        Valeria;
+  seg;    2;       ESTAT AP;        Valeria;
+  ter;    1;     INGLES III;           Anna;
+  ter;    2;        SOC TEC;         Clovis;
+  qua;    1;       ECON FIN;     Fernandina;
+  qua;    2;            IHC;       Fabricio;
+  qui;    1;           SO I;          Marco;
+  qui;    2;           SO I;          Marco;
+  sex;    1;             ED;         Takeda;
+  sex;    2;             ED;         Takeda;
+  sab;    1;    ENG SOFT II;         Plotze;
+  sab;    2;    ENG SOFT II;         Plotze;
+
+
+  ADS   Noite   Semestre 4
+
+  seg;    1;   ENG SOFT III;       Fabricio;
+  seg;    2;   ENG SOFT III;       Fabricio;
+  ter;    1;          SO II;          Marco;
+  ter;    2;          SO II;          Marco;
+  qua;    1;           MPCT;           Anna;
+  qua;    2;      INGLES IV;           Anna;
+  qui;    1;      P DISP MO;       Fabricio;
+  qui;    2;      P DISP MO;       Fabricio;
+  sex;    1;             BD;        Geraldo;
+  sex;    2;             BD;        Geraldo;
+  sab;    2;       PROG O O;          Lucas;
+  sab;    3;       PROG O O;          Lucas;
+
+
+  ADS   Noite   Semestre 5
+
+  seg;    1;       INGLES V;           Anna;
+  seg;    2;        SEG INF;       Carlos D;
+  ter;    1;         LAB BD;        Geraldo;
+  ter;    2;         LAB BD;        Geraldo;
+  qua;    1;       PROG WEB;           Jean;
+  qua;    2;       PROG WEB;           Jean;
+  qui;    1;       PROG LIN;         Junior;
+  qui;    2;       PROG LIN;         Junior;
+  sex;    1;   LAB ENG SOFT;          Lucas;
+  sex;    2;   LAB ENG SOFT;          Lucas;
+  sab;    2;     REDES COMP;          Marco;
+  sab;    3;     REDES COMP;          Marco;
+
+
+  ADS   Noite   Semestre 6
+
+  seg;    1;  TOP ESPECIAIS;         Plotze;
+  seg;    2;  TOP ESPECIAIS;         Plotze;
+  ter;    1;             IA;          Lucas;
+  ter;    2;             IA;          Lucas;
+  qua;    1;     GEST E GOV;       Fabricio;
+  qua;    2;     GEST E GOV;       Fabricio;
+  qui;    1;      INGLES VI;           Anna;
+  qui;    2;       EMPREEND;         Suzana;
+  sex;    1;     GEST EQUIP;         Suzana;
+  sex;    2;          ETICA;       Frachone;
+  sab;    2;      GEST PROJ;          Odair;
+  sab;    3;      GEST PROJ;          Odair;
+
+
+  GNI   Noite   Semestre 1
+
+  seg;    1;      ADM GERAL;        Rinaldo;
+  seg;    2;      ADM GERAL;        Rinaldo;
+  ter;    1;PROSP B INF TEC;          Odair;
+  ter;    2;PROSP B INF TEC;          Odair;
+  qua;    1;     EMP E INOV;         Suzana;
+  qua;    2;     EMP E INOV;         Suzana;
+  qui;    1;        COM EMP;       Fernando;
+  qui;    2;        COM EMP;       Fernando;
+  sex;    1;        CaLCULO;         Junior;
+  sex;    2;        CaLCULO;         Junior;
+  sab;    1;PI - GEST E INOV;          Odair;
+  sab;    3;       INGLES I;        Claudia;
+
+
+  GNI   Noite   Semestre 2
+
+  seg;    1;     LEGIS EMPR;       Frachone;
+  seg;    2;     LEGIS EMPR;       Frachone;
+  ter;    1;      PROSP NEG;        Livre 1;
+  ter;    2;      PROSP NEG;        Livre 1;
+  qua;    1;    ESTATISTICA;        Viviane;
+  qua;    2;    ESTATISTICA;        Viviane;
+  qui;    1;          PI II;          Odair;
+  qui;    2;      INGLES II;        Claudia;
+  sex;    1;       ECONOMIA;     Fernandina;
+  sex;    2;       ECONOMIA;     Fernandina;
+  sab;    2;      MARKETING;        Livre 1;
+  sab;    3;      MARKETING;        Livre 1;

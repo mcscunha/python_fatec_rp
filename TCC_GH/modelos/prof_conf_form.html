@@ -1,0 +1,21 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" 
+          name="viewport">
+    <title>Professores</title>
+    <!--
+        <link href="css/seu-stylesheet.css" rel="stylesheet"/>
+        <script src="scripts/seu-script.js"></script>
+    -->
+</head>
+<body>
+
+    <h1>Tem certeza que deseja deletar: {{ dados.professor }}</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <button type="submit">Deletar</button>
+        {% csrf_token %}
+    </form>
+
+</body>
+</html>

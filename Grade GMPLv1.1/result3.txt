@@ -1,0 +1,68 @@
+Horário Fatec v 1.1
+Alocação ideal  336
+Total alocado  150
+Disciplinas fora da disponibilidade dada
+
+
+ADS   Noite   Semestre 1
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+            LAB HARD           ADM GERAL             ALG L P            PROG M I            A O COMP                 ---
+            INGLES I           ADM GERAL             ALG L P            PROG M I            A O COMP            MAT DISC
+                 ---                 ---                 ---                 ---                 ---            MAT DISC
+ 
+
+
+ADS   Noite   Semestre 2
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+             CaLCULO           INGLES II             COM EXP           LING PROG          ENG SOFT I                 ---
+             CaLCULO              CONTAB             COM EXP           LING PROG          ENG SOFT I            SIST INF
+                 ---                 ---                 ---                 ---                 ---            SIST INF
+ 
+
+
+ADS   Noite   Semestre 3
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+            ESTAT AP          INGLES III            ECON FIN                SO I                  ED         ENG SOFT II
+            ESTAT AP             SOC TEC                 IHC                SO I                  ED         ENG SOFT II
+                 ---                 ---                 ---                 ---                 ---                 ---
+ 
+
+
+ADS   Noite   Semestre 4
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+        ENG SOFT III               SO II                MPCT           P DISP MO                  BD                 ---
+        ENG SOFT III               SO II           INGLES IV           P DISP MO                  BD            PROG O O
+                 ---                 ---                 ---                 ---                 ---            PROG O O
+ 
+
+
+ADS   Noite   Semestre 5
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+            INGLES V              LAB BD            PROG WEB            PROG LIN        LAB ENG SOFT                 ---
+             SEG INF              LAB BD            PROG WEB            PROG LIN        LAB ENG SOFT          REDES COMP
+                 ---                 ---                 ---                 ---                 ---          REDES COMP
+ 
+
+
+ADS   Noite   Semestre 6
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+       TOP ESPECIAIS                  IA          GEST E GOV           INGLES VI          GEST EQUIP                 ---
+       TOP ESPECIAIS                  IA          GEST E GOV            EMPREEND               ETICA           GEST PROJ
+                 ---                 ---                 ---                 ---                 ---           GEST PROJ
+ 
+
+
+GNI   Noite   Semestre 1
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+           ADM GERAL     PROSP B INF TEC          EMP E INOV             COM EMP             CaLCULO    PI - GEST E INOV
+           ADM GERAL     PROSP B INF TEC          EMP E INOV             COM EMP             CaLCULO                 ---
+                 ---                 ---                 ---                 ---                 ---            INGLES I
+ 
+
+
+GNI   Noite   Semestre 2
+             Segunda               Terça              Quarta              Quinta               Sexta              Sábado
+          LEGIS EMPR           PROSP NEG         ESTATISTICA               PI II            ECONOMIA                 ---
+          LEGIS EMPR           PROSP NEG         ESTATISTICA           INGLES II            ECONOMIA           MARKETING
+                 ---                 ---                 ---                 ---                 ---           MARKETING
+ 

@@ -1,0 +1,103 @@
+Disciplina,Professor,Curso,Periodo,Semstre,Ch
+INGLÊS I,Anna,ADS,Noite,1,2
+INGLÊS III,Anna,ADS,Noite,3,2
+MPCT,Anna,ADS,Noite,4,2
+INGLÊS IV,Anna,ADS,Noite,4,2
+INGLÊS V,Anna,ADS,Noite,5,2
+INGLÊS I,Anna,ADS,Manhã,1,2
+INGLÊS III,Anna,ADS,Manhã,3,2
+MPCT,Anna,ADS,Manhã,4,2
+INGLÊS IV,Anna,ADS,Manhã,4,2
+INGLÊS V,Anna,ADS,Manhã,5,2
+INGLÊS VI,Anna,ADS,Manhã,6,2
+INGLÊS VI,Anna,ADS,Noite,6,2
+SEG INF,Carlos D,ADS,Noite,5,2
+SEG INF,Carlos D,ADS,Manhã,5,2
+INGLÊS II,Cláudia,ADS,Noite,2,2
+INGLÊS II,Cláudia,ADS,Manhã,2,2
+SOC TEC,Clóvis,ADS,Noite,3,2
+SOC TEC,Clóvis,ADS,Manhã,3,2
+IHC,Fabrício,ADS,Noite,3,2
+IHC,Fabrício,ADS,Manhã,3,2
+ECON FIN,Fernandina,ADS,Noite,3,2
+ECON FIN,Fernandina,ADS,Manhã,3,2
+CONTAB,Leandro,ADS,Noite,2,2
+CONTAB,Leandro,ADS,Manhã,2,2
+LAB HARD,Marco,ADS,Noite,1,2
+LAB HARD,Marco,ADS,Manhã,1,2
+COM EXP,Carlos,ADS,Noite,2,4
+COM EXP,Carlos,ADS,Manhã,2,4
+A O COMP,Carlos D,ADS,Noite,1,4
+SIST INF,Carlos D,ADS,Noite,2,4
+A O COMP,Carlos D,ADS,Manhã,1,4
+SIST INF,Carlos D,ADS,Manhã,2,4
+ENG SOFT I,Cozin,ADS,Noite,2,4
+ENG SOFT II,Plotze,ADS,Noite,3,4
+ENG SOFT I,Cozin,ADS,Manhã,2,4
+ENG SOFT II,Plotze,ADS,Manhã,3,4
+ALG L P,Doniseti,ADS,Noite,1,4
+ALG L P,Doniseti,ADS,Manhã,1,4
+ENG SOFT III,Fabrício,ADS,Noite,4,4
+P DISP MO,Fabrício,ADS,Noite,4,4
+ENG SOFT III,Fabrício,ADS,Manhã,4,4
+P DISP MO,Fabrício,ADS,Manhã,4,4
+PROG M I,Geraldo,ADS,Noite,1,4
+BD,Geraldo,ADS,Noite,4,4
+LAB BD,Geraldo,ADS,Noite,5,4
+PROG M I,Geraldo,ADS,Manhã,1,4
+BD,Geraldo,ADS,Manhã,4,4
+LAB BD,Geraldo,ADS,Manhã,5,4
+PROG WEB,Jean,ADS,Noite,5,4
+PROG WEB,Jean,ADS,Manhã,5,4
+MAT DISC,Júnior,ADS,Noite,1,4
+CÁLCULO,Júnior,ADS,Noite,2,4
+PROG LIN,Júnior,ADS,Noite,5,4
+MAT DISC,Júnior,ADS,Manhã,1,4
+CÁLCULO,Júnior,ADS,Manhã,2,4
+PROG LIN,Júnior,ADS,Manhã,5,4
+PROG O O,Lucas,ADS,Noite,4,4
+LAB ENG SOFT,Lucas,ADS,Noite,5,4
+PROG O O,Lucas,ADS,Manhã,4,4
+LAB ENG SOFT,Lucas,ADS,Manhã,5,4
+IA,Lucas,ADS,Manhã,6,4
+IA,Lucas,ADS,Noite,6,4
+SO I,Marco,ADS,Noite,3,4
+SO II,Marco,ADS,Noite,4,4
+REDES COMP,Marco,ADS,Noite,5,4
+SO I,Marco,ADS,Manhã,3,4
+SO II,Marco,ADS,Manhã,4,4
+REDES COMP,Marco,ADS,Manhã,5,4
+LING PROG,Perez,ADS,Noite,2,4
+LING PROG,Perez,ADS,Manhã,2,4
+ADM GERAL,Suzana,ADS,Noite,1,4
+ADM GERAL,Suzana,ADS,Manhã,1,4
+ED,Takeda,ADS,Noite,3,4
+ED,Takeda,ADS,Manhã,3,4
+ESTAT AP,Valéria,ADS,Noite,3,4
+ESTAT AP,Valéria,ADS,Manhã,3,4
+GEST E GOV,Fabrício,ADS,Noite,6,4
+GEST E GOV,Fabrício,ADS,Manhã,6,4
+ETICA,Frachone,ADS,Manhã,6,2
+ETICA,Frachone,ADS,Noite,6,2
+GEST PROJ,Odair,ADS,Noite,6,4
+GEST PROJ,Odair,ADS,Manhã,6,4
+TOP ESPECIAIS,Plotze,ADS,Manhã,6,4
+TOP ESPECIAIS,Plotze,ADS,Noite,6,4
+GEST EQUIP,Suzana,ADS,Manhã,6,2
+GEST EQUIP,Suzana,ADS,Noite,6,2
+EMPREEND,Suzana,ADS,Manhã,6,2
+EMPREEND,Suzana,ADS,Noite,6,2
+INGLÊS I,Cláudia,GNI,Noite,1,2
+INGLÊS II,Cláudia,GNI,Noite,2,2
+PI - GEST E INOV,Odair,GNI,Noite,1,2
+COM EMP,Fernando,GNI,Noite,1,4
+CÁLCULO,Júnior,GNI,Noite,1,4
+EMP E INOV,Suzana,GNI,Noite,1,4
+PROSP B INF TEC,Odair,GNI,Noite,1,4
+ADM GERAL,Rinaldo,GNI,Noite,1,4
+ESTATISTICA,Viviane,GNI,Noite,2,4
+ECONOMIA,Fernandina,GNI,Noite,2,4
+LEGIS EMPR,Frachone,GNI,Noite,2,4
+PI II,Odair,GNI,Noite,2,2
+MARKETING,Livre 1,GNI,Noite,2,4
+PROSP NEG,Livre 1,GNI,Noite,2,4
