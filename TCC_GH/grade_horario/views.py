@@ -1,14 +1,19 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Professores
 from .prof_form import Cad_Prof_Form
 
+
 # Create your views here.
+@login_required
 def gh_list_prof(request):
     profs = Professores.objects.all()
     
     # terceiro parametro abaixo: {'NOME_VARIAVEL_HTML': objeto}
     return render(request, 'gh_list_prof.html', {'profs': profs})
 
+
+@login_required
 def gh_cad_prof(request):
     # Redirecionar para ModelForms do Django para montar o form
     form = Cad_Prof_Form(request.POST or None)
@@ -19,6 +24,8 @@ def gh_cad_prof(request):
     # Redirecionar para pagina HTML se retornar invalida
     return render(request, 'prof_form.html', {'form': form})
 
+
+@login_required
 def gh_upd_prof(request, id):
     dados = get_object_or_404(Professores, pk=id)
     
@@ -31,6 +38,8 @@ def gh_upd_prof(request, id):
     # Redirecionar para pagina HTML se retornar invalida
     return render(request, 'prof_form.html', {'form': form})
 
+
+@login_required
 def gh_del_prof(request, id):
     dados = get_object_or_404(Professores, pk=id)
     

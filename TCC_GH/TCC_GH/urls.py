@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
+
 from .views import fncHello
+from home import views
 from grade_horario import urls as gh_urls
 
 urlpatterns = [
+    path('', views.home),
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='login.html')),
+    path('accounts/logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('hello/', fncHello),
     path('admin/', admin.site.urls),
-    path('gh/', include(gh_urls)), # para adicionar links apos...
+    path('gh/', include(gh_urls)),
 ]
