@@ -4,6 +4,7 @@ from .views import gh_cad_prof
 from .views import gh_upd_prof
 from .views import gh_del_prof
 
+
 urlpatterns = [
     path('list_prof/', gh_list_prof, name='gh_list_prof'),
     path('cad_prof/', gh_cad_prof, name='gh_cad_prof'),
