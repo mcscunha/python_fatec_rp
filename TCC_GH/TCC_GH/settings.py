@@ -30,7 +30,6 @@ SECRET_KEY = ')w(u$x!bbih!@n#j)r0x&u!(61gjt!^@=l$h6!mw%zx-t%3ryb'
 DEBUG = True
 
 
-
 # Permitir resposta da aplicacao somente para os hosts listados abaixo
 ALLOWED_HOSTS = []
 
