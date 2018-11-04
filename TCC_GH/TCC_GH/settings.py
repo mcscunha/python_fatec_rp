@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from .environ import PROJ_SEC_KEY, PROJ_DB_DADOS
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')w(u$x!bbih!@n#j)r0x&u!(61gjt!^@=l$h6!mw%zx-t%3ryb'
+SECRET_KEY = PROJ_SEC_KEY
 
 
 
@@ -85,11 +87,11 @@ WSGI_APPLICATION = 'TCC_GH.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'    : 'django.db.backends.postgresql',
-        'NAME'      : 'dbtccsge2018',
-        'USER'      : 'usrpsg',
-        'PASSWORD'  : 'Heliw73%',
-        'HOST'      : 'tccsge2018.colyonzwqpbv.us-east-2.rds.amazonaws.com',
-        'PORT'      : '5432',
+        'NAME'      : PROJ_DB_DADOS['DB_NAME'],
+        'USER'      : PROJ_DB_DADOS['DB_USER'],
+        'HOST'      : PROJ_DB_DADOS['DB_HOST'],
+        'PASSWORD'  : PROJ_DB_DADOS['DB_PASS'],
+        'PORT'      : PROJ_DB_DADOS['DB_PORT'],
     }
 }
 
