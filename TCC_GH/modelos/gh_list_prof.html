@@ -1,35 +1,46 @@
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" 
-          name="viewport">
-    <title>Listagem de Professores</title>
-    <!--
-        <link href="css/seu-stylesheet.css" rel="stylesheet"/>
-        <script src="scripts/seu-script.js"></script>
-    -->
-</head>
-<body>
-    <p>Lista de professores cadastrados:</p>
-    <ul>
-        {% for prof in profs %}
-            <li>
-                <a href="{% url 'gh_upd_prof' prof.id_professor %}"> {{ prof.professor }} </a> </tab>
-                <a href="{% url 'gh_del_prof' prof.id_professor %}"> Deletar </a>
-            </li>
-        {% endfor %}
-    </ul>
- 
- 
+{% extends 'base.html' %}
+
+{% block title %}
+    Listagem de Professores
+{% endblock %}
+
+{% block main %}
+    {% csrf_token %}
+
+    <h3>Lista de professores cadastrados:</h3>
+    <br>
+
+        <div class="row">
+            {% for prof in profs %}
+
+                <div class="col-xs-12 col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{% url 'gh_upd_prof' prof.id_professor %}"> {{ prof.professor }} </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <a href="{% url 'gh_del_prof' prof.id_professor %}" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+
 	<aside>
-	    <br>
-	    <a href="{% url 'gh_cad_prof' %}">Novo Professor</a>
+	    <br><br>
+        <a href="{% url 'gh_cad_prof' %}" class="btn btn-success">Novo Professor</a>
+	    <br><br>
+   	    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
         <br><br>
-	    <a href="{% url 'logout' %}">Logout</a>
 	</aside>
- 
-	<footer>
-	    <p>Copyright 2018 - TCC - Fatec-Ribeirão Preto</p>
-	</footer>
-</body>
-</html>
+{% endblock %}
+
+{% block footer %}
+    Copyright 2018 - TCC - Fatec-Ribeirão Preto
+{% endblock %}
+
+

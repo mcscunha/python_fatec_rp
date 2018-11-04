@@ -1,24 +1,19 @@
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" 
-          name="viewport">
-    <title>Professores</title>
-    <!--
-        <link href="css/seu-stylesheet.css" rel="stylesheet"/>
-        <script src="scripts/seu-script.js"></script>
-    -->
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %}
+    Professores
+{% endblock %}
+
+{% block main %}
 
     <form method="POST">
         
         {% csrf_token %}
-        {{ form }}
+        {{ form|bootstrap }}
         <br><br>
-        <button type="submit">Salvar Professor</button>
+        <button type="submit" class="btn btn-success">Salvar Professor</button>
 
     </form>
 
-</body>
-</html>
+{% endblock %}
