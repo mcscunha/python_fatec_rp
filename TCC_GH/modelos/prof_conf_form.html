@@ -11,7 +11,7 @@
         {% csrf_token %}
 
         <button type="submit" class="btn btn-danger">Deletar</button>
-        <button type="submit" class="btn btn-primary">Cancelar</button>
+        <a href="{% url 'gh_list_prof' %}" class="btn btn-primary">Cancelar</a>
     </form>
 
 {% endblock %}

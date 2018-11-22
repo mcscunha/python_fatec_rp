@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Links
+{% endblock %}
+
+
+{% block main %}
+    {% csrf_token %}
+
+
+    <div class="row">
+
+        <div class="col-xs-6 col-md-4">
+        </div>
+
+
+        <div class="col-xs-6 col-md-4">
+            <h3>Cadastros:</h3>
+            <br> <br>
+
+            <a href="{% url 'gh_list_prof' %}" class="btn btn-success">Professores</a>
+
+            <a href="{% url 'list_cursos' %}" class="btn btn-success">Cursos</a>
+        </div>
+
+
+    </div>
+
+	<aside>
+	    <br><br>
+   	    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        <br><br>
+	</aside>
+{% endblock %}
+
+{% block footer %}
+    Copyright 2018 - TCC - Fatec-Ribeirão Preto
+{% endblock %}

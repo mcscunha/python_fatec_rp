@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
-from .views import fncHello
+from .views import fncHello, listaLinks
 from home import urls as urls_home
 from grade_horario import urls as gh_urls
+from cursos import urls as cur_urls
 
 
 urlpatterns = [
@@ -28,5 +29,8 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('hello/', fncHello),
     path('admin/', admin.site.urls),
+    path('list_links/', listaLinks, name='list_links'),
+
     path('gh/', include(gh_urls)),
+    path('cur/', include(cur_urls)),
 ]
