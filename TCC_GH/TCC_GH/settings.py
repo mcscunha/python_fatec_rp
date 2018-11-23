@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import sys
 from .environ import PROJ_SEC_KEY, PROJ_DB_DADOS
 
 
@@ -148,4 +147,4 @@ MEDIA_ROOT = 'media'
 
 LOCAL_URL = '/login/'
 
-LOGIN_REDIRECT_URL = 'gh_list_prof'
+LOGIN_REDIRECT_URL = 'list_links'

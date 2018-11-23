@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Cursos
+{% endblock %}
+
+{% block main %}
+    {% csrf_token %}
+
+    <h3>Lista de cursos cadastrados:</h3>
+    <br>
+
+        <div class="row">
+
+            {% for cur in curs %}
+
+                <div class="col-xs-12 col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{% url 'cur_upd_curso' cur.id_curso %}"> {{ cur.nome }} </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <a href="{% url 'cur_del_curso' cur.id_curso %}" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+	<aside>
+	    <br><br>
+        <a href="{% url 'list_links' %}" class="btn btn-success">Cadastros</a>
+        <a href="{% url 'cur_cad_curso' %}" class="btn btn-success">Novo Curso</a>
+	    <br><br>
+   	    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        <br><br>
+	</aside>
+{% endblock %}
+
+{% block footer %}
+    Copyright 2018 - TCC - Fatec-Ribeirão Preto
+{% endblock %}
+
+

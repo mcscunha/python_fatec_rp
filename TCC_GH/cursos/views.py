@@ -15,40 +15,40 @@ def list_cursos(request):
 
 
 @login_required
-def cur_cad_cur(request):
+def ins_cur(request):
     # Redirecionar para ModelForms do Django para montar o form
     form = Cad_Cursos_Form(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('cur_list_cursos')
+        return redirect('list_cursos')
 
     # Redirecionar para pagina HTML se retornar invalida
     return render(request, 'cur_form.html', {'form': form})
 
 
 @login_required
-def gh_upd_prof(request, id):
+def upd_curso(request, id):
     dados = get_object_or_404(Cursos, pk=id)
 
     # Redirecionar para ModelForms do Django para montar o form
     form = Cad_Cursos_Form(request.POST or None, instance=dados)
     if form.is_valid():
         form.save()
-        return redirect('cur_list_cursos')
+        return redirect('list_cursos')
 
     # Redirecionar para pagina HTML se retornar invalida
     return render(request, 'cur_form.html', {'form': form})
 
 
 @login_required
-def gh_del_prof(request, id):
+def del_curso(request, id):
     dados = get_object_or_404(Cursos, pk=id)
 
     # Redirecionar para ModelForms do Django para montar o form
     form = Cad_Cursos_Form(request.POST or None, instance=dados)
     if request.method == 'POST':
         dados.delete()
-        return redirect('cur_list_cursos')
+        return redirect('list_cursos')
 
     # Redirecionar para pagina HTML se retornar invalida
-    return render(request, 'list_links', {'dados': dados})
+    return render(request, 'conf_del_curso.html', {'dados': dados})
