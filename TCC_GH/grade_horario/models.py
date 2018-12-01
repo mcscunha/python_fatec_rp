@@ -15,8 +15,16 @@ class Cursos(models.Model):
 
     def __str__(self):
         return self.nome
-    
-    
+
+
+class Dias(models.Model):
+    id_dias = models.AutoField(primary_key=True)
+    dia_semana = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.dia_semana
+
+
 class Periodos(models.Model):
     id_periodo = models.AutoField(primary_key=True)
     periodo = models.CharField(max_length=50)
@@ -33,14 +41,6 @@ class Semetres(models.Model):
         return self.semestre
 
 
-class Dias(models.Model):
-    id_dias = models.AutoField(primary_key=True)
-    dia_semana = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.dia_semana
-    
-    
 class Disciplinas(models.Model):
     id_disciplina = models.AutoField(primary_key=True)
     id_professor = models.ForeignKey(Professores, on_delete=models.DO_NOTHING)

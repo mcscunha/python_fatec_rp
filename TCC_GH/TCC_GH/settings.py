@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'grade_horario',
     'home',
     'cursos',
+    'dias',
+    'periodos',
 ]
 
 MIDDLEWARE = [

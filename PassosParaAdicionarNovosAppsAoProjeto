@@ -1,0 +1,33 @@
+python manage.py startapp NomeApp
+
+	a) Adicionar, em SETTINGS, o app adicionado, na variavel: INSTALLED_APPS
+	b) Criar a pasta templates, no mesmo diretorio da app
+	c) Criar o arquivo urls.py no diretorio do novo app. Este arquivo contem todas as rotas para esta nova app
+
+		from django.urls import path
+		from .views import list_dias, ins_dia, upd_dia, del_dia
+
+		urlpatterns = [
+			path('list_dias/', list_dias, name='list_dias'),
+			path('dia_cad_dia/', ins_dia, name='dia_cad_dia'),
+			path('dia_upd_dia/<int:id>', upd_dia, name='dia_upd_dia'),
+			path('dia_del_dia/<int:id>', del_dia, name='dia_del_dia'),
+		]
+
+	d) Acrescentar em views, todas os metodos listados acima (alterando as partes pertinentes)
+
+	e) Conforme for alterando as partes do arquivo views.py, vá acrescentado os HTML pertencentes ao novo app
+
+	f) Criar o arquivo app_form.py no diretorio da app. Responsavel por montar os formularios automaticamente
+
+	g) Adicionar a rota de urls para esta nova app, no projeto principal
+
+		from NomeApp import urls per_urls
+		
+		path('per/', include(per_urls)),
+
+	h) Alterar o list_links.html para acrescentar este novo app
+
+	i) Alterar todos os HTML's adicionados no passo de alteracao da views
+
+

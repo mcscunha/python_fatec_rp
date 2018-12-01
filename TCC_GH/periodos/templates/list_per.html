@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Períodos
+{% endblock %}
+
+{% block main %}
+    {% csrf_token %}
+
+    <h3>Lista de Períodos Cadastrados:</h3>
+    <br>
+
+        <div class="row">
+
+            {% for dado in dados %}
+
+                <div class="col-xs-12 col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{% url 'upd_per' dado.id_periodo %}"> {{ dado.periodo }} </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <a href="{% url 'del_per' dado.id_periodo %}" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+	<aside>
+	    <br><br>
+        <a href="{% url 'list_links' %}" class="btn btn-success">Cadastros</a>
+        <a href="{% url 'cad_per' %}" class="btn btn-success">Novo Período</a>
+	    <br><br>
+   	    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        <br><br>
+	</aside>
+{% endblock %}
+
+{% block footer %}
+    Copyright 2018 - TCC - Fatec-Ribeirão Preto
+{% endblock %}
+
+

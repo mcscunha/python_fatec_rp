@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
 from grade_horario.models import Cursos
 from .cur_form import Cad_Cursos_Form
 
