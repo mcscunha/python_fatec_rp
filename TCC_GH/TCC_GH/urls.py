@@ -24,6 +24,7 @@ from cursos import urls as cur_urls
 from dias import urls as dia_urls
 from periodos import urls as per_urls
 from semestres import urls as sem_urls
+from disciplinas import urls as disc_urls
 
 
 urlpatterns = [
@@ -39,4 +40,5 @@ urlpatterns = [
     path('dia/', include(dia_urls)),
     path('per/', include(per_urls)),
     path('sem/', include(sem_urls)),
+    path('disc/', include(disc_urls)),
 ]

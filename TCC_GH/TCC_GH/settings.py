@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'dias',
     'periodos',
     'semestres',
+    'disciplinas',
 ]
 
 MIDDLEWARE = [
