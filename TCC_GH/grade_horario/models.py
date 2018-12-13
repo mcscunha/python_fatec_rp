@@ -39,7 +39,7 @@ class Semestres(models.Model):
     semestre = models.IntegerField()
 
     def __str__(self):
-        return self.semestre
+        return str(self.semestre)
 
 
 class Disciplinas(models.Model):
@@ -52,7 +52,7 @@ class Disciplinas(models.Model):
     carga_horaria = models.IntegerField()
     
     def __str__(self):
-        return self.id_curso + ' - ' + self.disciplina
+        return 'Curso: {} - Disciplina: {}'.format(Cursos.nome, self.disciplina)
 
 
 class Disponibilidades(models.Model):

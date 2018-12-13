@@ -9,10 +9,10 @@ class Cad_Disc_Form(ModelForm):
         model = Disciplinas
         fields = [
             'id_disciplina',
-            'disciplina',
             'id_professor',
             'id_curso',
             'id_periodo',
             'id_semestre',
+            'disciplina',
             'carga_horaria'
         ]
