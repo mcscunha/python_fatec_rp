@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %}
+    Cadastrar Disciplina
+{% endblock %}
+
+{% block main %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <br><br>
+        <a href="{% url 'list_disc' %}" class="btn btn-primary">Cancelar</a>
+        <button type="submit" class="btn btn-success">Salvar Disciplina</button>
+
+    </form>
+
+{% endblock %}
