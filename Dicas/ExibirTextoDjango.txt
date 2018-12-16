@@ -1,0 +1,108 @@
+
+Upload de arquivos no Django: entendendo os modos de leitura
+
+// Tags django csv upload HttpRequest UploadedFile
+
+Em uma conversa com a galera do Welcome to the Django acabei experimentando e aprendendo – na prática — sobre csv, strings, bytes, file object e a maneira como uploads funcionam. Registrei minha exploração e espero que mais gente possa encontrar uma ou outra coisa nova aqui!
+O problema
+
+Fui alterar um projeto feito com Django, atualizando do Python 2 para o Python 3, e me deparei com um pedaço de uma view que, como o Henrique Bastos falou, funcionava “por acaso” no Python 2:
+
+def foobar(request):
+    …    
+    lines = csv.reader(request.FILES['file.csv'])
+    for line in lines:
+        …
+
+Essa view recebe um arquivo CSV (upload do usuáio) e só processa as linhas do arquivo, sem salvá-lo em disco. No Python 3, esse trecho da view passou a dar erro:
+
+_csv.Error: iterator should return strings, not bytes (did you open the file in text mode?)
+
+O Henrique, além de falar que o código funcionava “por acaso”, me lembrou que o csv.reader(…) já recebe um arquivo aberto. Assim fui explorar a maneira que o Django estava me entregando os arquivos no HttpRequest (no caso da minha view, o que eu tinha em mãos no request.FILES['file.csv']).
+Simulando o ambiente da view
+
+Para explorar isso, eu precisava simular o ambiente da minha view. Comecei criando um arquivo simples, teste.txt:
+
+Linha 1, foo
+Linha 2, bar
+Linha 3, acentuação
+
+Depois fui ler a documentação do HttpRequest.FILES e descobri que os arquivos ali disponíveis são instâncias de UploadedFile.
+
+Logo, se eu criar uma instância da classe UploadedFile, posso acessar um objeto do mesmo tipo que eu acessava na view pelo request.FILES['file.csv']. Para criar essa instância, preciso de um arquivo aberto, algo como open(file_path, modo). Para continuar a simulação, eu precisava saber de que forma o Django abre o arquivo do upload quando instancia ele no HttpRequest.FILES.
+
+Eu desconfiava que não era em texto (r), que era em binário (rb). A documentação do curl, por exemplo, indicava que os arquivos eram enviados como binários. A documentação da Requests tem um aviso grande, em vermelho, desencorajando qualquer um usar outro modo que não o binário.
+
+Lendo mais sobre o UploadedFile descobri que esse objeto tem um atributo file que, é uma referência ao file object nativo do Python que a classe UploadFile envolve. E esse atributo file, por sua vez, tem o atributo mode que me diz qual o modo foi utilizado na abertura do arquivo. Fui lá na minha view e dei um print(request.FILES['file.csv'].file.mode) e obtive rb como resposta.
+
+Pronto! Finalmente eu tinha tudo para simular o ambiente da view no meu IPython:
+
+import csv
+from django.core.files.uploadedfile import UploadedFile
+uploaded = UploadedFile(open('teste.txt', 'rb'), 'teste.txt')
+
+Assim testei o trecho que dava problema…
+
+for line in csv.reader(uploaded.file):
+    print(line)
+
+… e obtive o mesmo erro.
+Solução
+
+Como já tinha ficado claro, o arquivo estava aberto como binário. Isso dá erro na hora de usar o csv.reader(…), pois o csv.reader(…) espera um texto, string como argumento. Aqui nem precisei ler a documentação, só lembrei da mensagem de erro: did you open the file in text mode? – ou seja, você abriu o arquivo no modo texto?
+
+Lendo a documentação do UploadedFile e do File do Django (já que a primeira herda da segunda), achei dois métodos úteis: o close() e o open(). Com eles fechei o arquivo que estava aberto no modo rb e (re)abri o mesmo arquivo como r:
+
+uploaded.close()
+uploaded.open('r')
+
+Agora sim o arquivo está pronto para o csv.reader(…):
+
+for line in csv.reader(uploaded.file):
+    print(line)
+
+['Linha 1', ' foo']
+['Linha 2', ' bar']
+['Linha 3', ' acentuação']
+
+Enfim, esse métodos UploadedFile.close() e UploadedFile.open(mode=mode) podem ser muito úteis quando queremos fazer algo diferente de gravar os arquivos recebidos em disco.
+
+    Quem aprendeu alguma coisa nova?
+
+    — Raymond Hettinger 
+
+Licença Creative Commons
+"Upload de arquivos no Django: entendendo os modos de leitura" de "Eduardo Cuducos" está licenciado com uma Licença Creative Commons - Atribuição-NãoComercial-SemDerivações 4.0 Internacional. 
+
+
+
+
+
+
+
+
+Cuducos passei pelo mesmo problema mas acabei achando uma outra solução:
+
+http://stackoverflow.com/qu...
+
+Usando TextIOWrapper segue o exemplo:
+
+
+
+from io import TextIOWrapper
+
+csvfile = TextIOWrapper(request.FILES['filename'].file)
+reader = csv.DictReader(csvfile)
+for row in reader:
+     print(row)
+
+
+
+
+;)
+
+•
+Responder
+•
+Compartilhar ›
+

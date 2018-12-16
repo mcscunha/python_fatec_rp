@@ -2,7 +2,7 @@
 {% load bootstrap %}
 
 {% block title %}
-    Cadastrar Disciplina
+    Cadastrar Disponibilidade
 {% endblock %}
 
 {% block main %}
@@ -12,8 +12,8 @@
         {% csrf_token %}
         {{ form|bootstrap }}
         <br><br>
-        <a href="{% url 'list_disc' %}" class="btn btn-primary">Cancelar</a>
-        <button type="submit" class="btn btn-success">Salvar Disciplina</button>
+        <a href="{% url 'list_disp' %}" class="btn btn-primary">Cancelar</a>
+        <button type="submit" class="btn btn-success">Salvar Disponibilidade</button>
 
     </form>
 

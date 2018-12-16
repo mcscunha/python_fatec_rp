@@ -8,6 +8,9 @@ class Professores(models.Model):
     
     def __str__(self):
         return self.professor
+
+    def __repr__(self):
+        return self.professor
     
     
 class Cursos(models.Model):
@@ -52,19 +55,22 @@ class Disciplinas(models.Model):
     carga_horaria = models.IntegerField()
     
     def __str__(self):
-        return 'Curso: {} - Disciplina: {}'.format(Cursos.nome, self.disciplina)
+        return 'Curso: {} - Disciplina: {}'.format(Cursos, self.disciplina)
 
 
 class Disponibilidades(models.Model):
     id_disponibilidade = models.AutoField(primary_key=True)
     id_professor = models.ForeignKey(Professores, on_delete=models.DO_NOTHING)
     id_periodo = models.ForeignKey(Periodos, on_delete=models.DO_NOTHING)
-    id_dias = models.ForeignKey(Dias, on_delete=models.DO_NOTHING)
-    id_disciplina = models.ForeignKey(Disciplinas, on_delete=models.DO_NOTHING)
-    id_curso = models.ForeignKey(Cursos, on_delete=models.DO_NOTHING)
-    id_semestre = models.ForeignKey(Semestres, on_delete=models.DO_NOTHING)
     horario = models.IntegerField()
-    carga_horaria = models.IntegerField()
-    
+    sequencia = models.IntegerField()
+    segunda = models.BooleanField('Segunda-Feira')
+    terca = models.BooleanField('Terça-Feira')
+    quarta = models.BooleanField('Quarta-Feira')
+    quinta = models.BooleanField('Quinta-Feira')
+
+    sexta = models.BooleanField('Sexta-Feira')
+    sabado = models.BooleanField('Sábado')
+
     def __str__(self):
-        return self.horario
+        return 'Professor: {} - Periodo: {}'.format(Professores, Periodos)

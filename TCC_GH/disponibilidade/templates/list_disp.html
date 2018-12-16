@@ -7,7 +7,7 @@
 {% block main %}
     {% csrf_token %}
 
-    <h3>Lista de Disciplinas Cadastradas:</h3>
+    <h3>Lista de Disponibilidades Cadastradas:</h3>
     <br>
 
         <div class="row">
@@ -17,13 +17,13 @@
                 <div class="col-xs-12 col-md-8">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{% url 'upd_disc' dado.id_disciplina %}"> {{ dado.id_curso }} - {{ dado.disciplina }} </a>
+                            <a href="{% url 'upd_disp' dado.id_disponibilidade %}"> {{ dado }} </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-4">
-                    <a href="{% url 'del_disc' dado.id_disciplina %}" class="btn btn-danger">
+                    <a href="{% url 'del_disp' dado.id_disponibilidade %}" class="btn btn-danger">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </div>
@@ -35,7 +35,7 @@
 	<aside>
 	    <br><br>
         <a href="{% url 'list_links' %}" class="btn btn-success">Cadastros</a>
-        <a href="{% url 'cad_disc' %}" class="btn btn-success">Nova Disciplina</a>
+        <a href="{% url 'cad_disp' %}" class="btn btn-success">Nova Disponibilidade</a>
 	    <br><br>
    	    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
         <br><br>

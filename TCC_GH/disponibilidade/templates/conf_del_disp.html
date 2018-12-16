@@ -6,12 +6,12 @@
 
 {% block main %}
 
-    <h1>Tem certeza que deseja deletar a disciplina: {{ dados.disciplina }}</h1>
+    <h1>Tem certeza que deseja deletar a disponibilidade: {{ dados }}</h1>
     <form method="POST" enctype="multipart/form-data">
 
         {% csrf_token %}
 
-        <a href="{% url 'list_disc' %}" class="btn btn-primary">Cancelar</a>
+        <a href="{% url 'list_disp' %}" class="btn btn-primary">Cancelar</a>
         <button type="submit" class="btn btn-danger">Deletar</button>
     </form>
 
