@@ -17,13 +17,13 @@
                 <div class="col-xs-12 col-md-8">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{% url 'upd_disp' dado.id_disponibilidade %}"> {{ dado }} </a>
+                            <a href="{% url 'upd_disp' dado.id %}"> {{ dado }} </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-4">
-                    <a href="{% url 'del_disp' dado.id_disponibilidade %}" class="btn btn-danger">
+                    <a href="{% url 'del_disp' dado.id %}" class="btn btn-danger">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </div>

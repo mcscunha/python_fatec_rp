@@ -22,7 +22,7 @@ def ins_sem(request):
         return redirect('list_sem')
 
     # Redirecionar para pagina HTML se retornar invalida
-    return render(request, 'disp_form.html', {'form': form})
+    return render(request, 'sem_form.html', {'form': form})
 
 
 @login_required
@@ -36,7 +36,7 @@ def upd_sem(request, id):
         return redirect('list_sem')
 
     # Redirecionar para pagina HTML se retornar invalida
-    return render(request, 'disp_form.html', {'form': form})
+    return render(request, 'sem_form.html', {'form': form})
 
 
 @login_required
@@ -50,4 +50,4 @@ def del_sem(request, id):
         return redirect('list_sem')
 
     # Redirecionar para pagina HTML se retornar invalida
-    return render(request, 'conf_del_disp.html', {'dados': dados})
+    return render(request, 'conf_del_sem.html', {'dados': dados})

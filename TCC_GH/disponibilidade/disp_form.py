@@ -8,7 +8,6 @@ class Cad_Disp_Form(ModelForm):
     class Meta:
         model = Disponibilidades
         fields = [
-            'id_disponibilidade',
             'id_professor',
             'id_periodo',
             'horario',

@@ -17,13 +17,13 @@
                 <div class="col-xs-12 col-md-8">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{% url 'dia_upd_dia' dia.id_dias %}"> {{ dia.dia_semana }} </a>
+                            <a href="{% url 'dia_upd_dia' dia.id %}"> {{ dia.dia_semana }} </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-4">
-                    <a href="{% url 'dia_del_dia' dia.id_dias %}" class="btn btn-danger">
+                    <a href="{% url 'dia_del_dia' dia.id %}" class="btn btn-danger">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </div>

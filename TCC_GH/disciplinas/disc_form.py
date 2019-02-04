@@ -8,7 +8,6 @@ class Cad_Disc_Form(ModelForm):
     class Meta:
         model = Disciplinas
         fields = [
-            'id_disciplina',
             'id_professor',
             'id_curso',
             'id_periodo',

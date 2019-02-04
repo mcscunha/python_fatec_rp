@@ -16,13 +16,23 @@ from .environ import PROJ_SEC_KEY, PROJ_DB_DADOS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#sys.path.insert(0, os.path.join(BASE_DIR)) # add this line
+# sys.path.insert(0, os.path.join(BASE_DIR)) # add this line
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_DOC_ROOT = os.path.join(PROJECT_DIR, "static")
+# TEMPLATE_DIRS = (
+#     os.path.join(PROJECT_DIR, "templates"),
+# )
+
+
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = PROJ_SEC_KEY
+
 
 
 
@@ -92,13 +102,20 @@ WSGI_APPLICATION = 'TCC_GH.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'    : 'django.db.backends.postgresql',
-        'NAME'      : PROJ_DB_DADOS['DB_NAME'],
-        'USER'      : PROJ_DB_DADOS['DB_USER'],
-        'HOST'      : PROJ_DB_DADOS['DB_HOST'],
-        'PASSWORD'  : PROJ_DB_DADOS['DB_PASS'],
-        'PORT'      : PROJ_DB_DADOS['DB_PORT'],
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+
+
+    # 'default': {
+    #     'ENGINE'    : 'django.db.backends.postgresql',
+    #     'NAME'      : PROJ_DB_DADOS['DB_NAME'],
+    #     'USER'      : PROJ_DB_DADOS['DB_USER'],
+    #     'HOST'      : PROJ_DB_DADOS['DB_HOST'],
+    #     'PASSWORD'  : PROJ_DB_DADOS['DB_PASS'],
+    #     'PORT'      : PROJ_DB_DADOS['DB_PORT'],
+    # }
+
 }
 
 # Password validation

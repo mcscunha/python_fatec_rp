@@ -17,13 +17,13 @@
                 <div class="col-xs-12 col-md-8">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{% url 'cur_upd_curso' cur.id_curso %}"> {{ cur.nome }} </a>
+                            <a href="{% url 'cur_upd_curso' cur.id %}"> {{ cur.nome }} </a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-4">
-                    <a href="{% url 'cur_del_curso' cur.id_curso %}" class="btn btn-danger">
+                    <a href="{% url 'cur_del_curso' cur.id %}" class="btn btn-danger">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </div>

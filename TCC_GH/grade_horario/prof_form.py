@@ -6,4 +6,4 @@ from .models import Professores
 class Cad_Prof_Form(ModelForm):
     class Meta:
         model = Professores
-        fields = ['id_professor', 'professor']
+        fields = ['professor']

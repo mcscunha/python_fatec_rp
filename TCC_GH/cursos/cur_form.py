@@ -7,4 +7,4 @@ from grade_horario.models import Cursos
 class Cad_Cursos_Form(ModelForm):
     class Meta:
         model = Cursos
-        fields = ['id_curso', 'nome']
+        fields = ['nome']

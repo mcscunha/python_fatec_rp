@@ -7,4 +7,4 @@ from grade_horario.models import Dias
 class Cad_Dias_Form(ModelForm):
     class Meta:
         model = Dias
-        fields = ['id_dias', 'dia_semana']
+        fields = ['dia_semana']
