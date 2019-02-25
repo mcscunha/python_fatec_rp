@@ -4,7 +4,8 @@ from django.db import migrations
 
 
 def carregar_sql_dados_semestre():
-    sql_semestre = open('grade_horario/sql/semestre.sql', 'r').read()
+    sql_semestre = open('grade_horario/sql/semestre.sql', 'r', encoding='utf-8').read()
+    # print('Carregando dados de semestres:\n', sql_semestre)
     return sql_semestre
 
 

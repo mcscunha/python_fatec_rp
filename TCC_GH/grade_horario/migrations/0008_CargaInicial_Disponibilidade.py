@@ -4,7 +4,7 @@ from django.db import migrations
 
 
 def carregar_sql_disponibilidade():
-    sql_disponibilidade = open('grade_horario/sql/disponibilidade.sql', 'r').read()
+    sql_disponibilidade = open('grade_horario/sql/disponibilidades.sql', 'r').read()
     return sql_disponibilidade
 
 

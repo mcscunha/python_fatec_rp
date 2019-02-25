@@ -8,7 +8,8 @@ def carregar_dados_do_sql():
     # import os
     # print(os.getcwd())
     # sql_statements = open('grade_horario/sql/professores.sql', 'r', encoding='utf-8', errors='ignore').read()
-    sql_statements = open('grade_horario/sql/professores.sql', 'r', encoding='latin-1').read()
+    sql_statements = open('grade_horario/sql/professores.sql', 'r', encoding='utf-8').read()
+    # print('Carregando dados de professores:\n', sql_statements)
     return sql_statements
 
 
